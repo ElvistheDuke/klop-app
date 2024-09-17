@@ -1,0 +1,11 @@
+/* HERO SECTION */
+
+.heroh2{
+  @apply text-white text-4xl max-w-[60%] sm:max-w-none sm:text-5xl
+}
+.heroButton{
+  @apply bg-white rounded-3xl py-1 px-4 font-bold text-sm pt-2
+}
+
+/* Rectangle 2 */
+
