@@ -6,6 +6,18 @@
 .heroButton{
   @apply bg-white rounded-3xl py-1 px-4 font-bold text-sm pt-2
 }
+.aboutTop h2{
+  @apply lg:text-2xl text-xl
+}
 
 /* Rectangle 2 */
 
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
