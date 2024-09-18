@@ -1,5 +1,4 @@
 import { ArrowUpRightIcon } from '@heroicons/react/16/solid'
-import React from 'react'
 import lagosimg from '../assets/locations/lagos.png'
 import berlinimg from '../assets/locations/berlin.png'
 import newyorkimg from '../assets/locations/newyork.png'
