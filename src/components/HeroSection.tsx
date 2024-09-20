@@ -2,11 +2,17 @@ import { ArrowRightIcon, ArrowUpRightIcon } from '@heroicons/react/16/solid'
 import icon1 from '../assets/h1.png'
 import herobg from '../assets/herobg.png'
 import { GiftIcon } from '@heroicons/react/20/solid'
+import NavBar from './NavBar'
+import MobileNav from './MobileNav'
+
+const navLinks:string[] = ["Home", "About", "Services", "Dashoboard", "Blog", "Support"]
 
 function HeroSection() {
   return (
-    <div className='bg-[#1E1E1E] mx-auto w-[99%] rounded-[42px]'>
-        <div className='container relative  mx-auto flex-col justify-between sm:h-[97vh]  my-2  flex sm:flex-row items-end p-[42px] pt-28 sm:p-[42px] '>
+    <div className='bg-[#1E1E1E] mx-auto sm:w-[99%] sm:rounded-[42px] relative'>
+        <NavBar navLinks={navLinks} />
+        <MobileNav navLinks={navLinks} />
+        <div className='container relative  mx-auto flex-col justify-between sm:h-[97vh]  sm:my-2  flex sm:flex-row sm:items-end p-[42px] pt-28 sm:p-[42px] '>
             <img src={herobg} className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]' />
             <div className='mb-12 sm:mb-0'>
                 <div className='flex gap-1 flex-row items-center'>
@@ -42,7 +48,7 @@ function HeroSection() {
 
                 </div>
             </div>
-            <div className='bg-white w-64 h-40 rounded-3xl p-6 relative'>
+            <div className='bg-white w-64 h-40 rounded-3xl p-6 relative self-end'>
                 <div className='flex gap-1 items-center'>
                     <GiftIcon className='h-4 w-4' />
                     <p className='text-sm'>Special Offer</p>

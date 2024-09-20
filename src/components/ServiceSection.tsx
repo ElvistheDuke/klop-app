@@ -45,7 +45,7 @@ function ServiceSection() {
                     </div>
                 </div>
                 <div className='flex mb-2 gap-1'>
-                    <div className='bg-[#F6EBAE] rounded-3xl h-8 px-4 font-bold text-sm pt-2'>
+                    <div className='bg-[#F6EBAE] min-w-24 text-center rounded-3xl h-8 px-4 font-bold text-sm pt-2'>
                         <p className='text-xs'>See More</p>
                     </div>
                     <div className='w-8 h-8 bg-[#F6EBAE] rounded-full items-center justify-center flex'>
@@ -59,6 +59,25 @@ function ServiceSection() {
                         return <ServiceLine name={item.name} desc={item.desc} key={index} num={index + 1} />
                     })
                 }
+            </div>
+            <div className='bg-black rounded-3xl gap-40 p-8 flex flex-col justify-between'>
+                <div>
+                    <p className='text-white max-w-[70%] md:max-w-[30%]'>Get a free consultation with a supply-chain specialist right now - take your first step towards commercial freedom</p>
+                </div>
+                <div className='flex justify-between items-end'>
+                    <div>
+                        <h2 className='text-white'>LET'S GET STARTED</h2>
+                        <h2 className='text-white'>WITH US. ONCE CLICK AWAY</h2>
+                    </div>
+                    <div className='flex mb-2 gap-1'>
+                        <div className='bg-[#F6EBAE] text-center min-w-24 rounded-3xl h-8 px-4 font-bold text-sm pt-2'>
+                            <p className='text-xs'>Let's Work</p>
+                        </div>
+                        <div className='w-8 h-8 bg-[#F6EBAE] rounded-full items-center justify-center flex'>
+                            <ArrowUpRightIcon className='h-6 text-black' />
+                        </div>  
+                    </div>
+                </div>
             </div>
         </div>
     </div>
