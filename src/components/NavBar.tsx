@@ -6,7 +6,7 @@ interface Props {
 
 function NavBar(props: Props) {
   return (
-    <div className='absolute h-10  w-[90%] translate-x-[-50%] left-[50%] top-5 md:flex gap-3 hidden'>
+    <div className='absolute h-10  w-[95%] translate-x-[-50%] left-[50%] top-5 md:flex gap-3 hidden'>
         <div className='flex bg-white rounded-3xl justify-center items-center px-3'>
             <ArrowUpRightIcon className='h-4 mb-[1px]' />
             <h1 className='text-xs font-extrabold'>KLOP</h1>

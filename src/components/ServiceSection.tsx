@@ -1,5 +1,6 @@
 import { ArrowUpRightIcon } from '@heroicons/react/16/solid'
 import ServiceLine from './ServiceLine'
+import bgimage from '../assets/vector-bg.png'
 
 
 const services = [
@@ -60,7 +61,11 @@ function ServiceSection() {
                     })
                 }
             </div>
-            <div className='bg-black rounded-3xl gap-40 p-8 flex flex-col justify-between'>
+            <div style={{
+                backgroundImage: `url(${bgimage})`,
+                backgroundPosition: 'right top',
+                backgroundRepeat: 'no-repeat'
+            }} className='bg-black rounded-3xl gap-40 p-8 flex flex-col justify-between'>
                 <div>
                     <p className='text-white max-w-[70%] md:max-w-[30%]'>Get a free consultation with a supply-chain specialist right now - take your first step towards commercial freedom</p>
                 </div>

@@ -6,6 +6,7 @@ import card4 from '../assets/cards/card4.png'
 import card5 from '../assets/cards/card5.png'
 import card6 from '../assets/cards/card6.png'
 import HowCards from './HowCards'
+import bgimage from '../assets/vector-bg.png'
 
 
 
@@ -56,7 +57,11 @@ function HowSection() {
                     })
                 }
             </div>
-            <div className='bg-black rounded-3xl gap-40 p-8 flex flex-col justify-between'>
+            <div style={{
+                backgroundImage: `url(${bgimage})`,
+                backgroundPosition: 'right top',
+                backgroundRepeat: 'no-repeat',
+            }} className='bg-black rounded-3xl gap-40 p-8 flex flex-col justify-between'>
                 <div>
                     <p className='text-white max-w-[70%] md:max-w-[30%]'>Explore how our team has tackled diverse challenges in financial technology, assisting startups and major players in the commerce industry</p>
                 </div>

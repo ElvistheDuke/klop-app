@@ -46,7 +46,7 @@ function LocationSection() {
                 </div>  
             </div>
         </div>
-        <div className='flex px-8 py-4 gap-4 overflow-scroll no-scrollbar'>
+        <div className='flex px-8 py-4 gap-4 overflow-scroll no-scrollbar 2xl:overflow-auto'>
             {
                 locations.map((item, index) => {
                     return <LocationCard key={index} image={item.image} name={item.Name} />

@@ -14,7 +14,7 @@ function LocationCard( props: Props) {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover'
-    }} className='min-w-72 rounded-3xl flex flex-col justify-between p-6'>
+    }} className='min-w-72 rounded-3xl flex flex-col justify-between p-6 2xl:flex-1'>
         
         <div className='flex justify-between'>
             <div className='bg-white rounded-xl h-8 px-4 font-bold text-sm pt-2'>
