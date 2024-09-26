@@ -4,6 +4,7 @@ import berlinimg from '../assets/locations/berlin.png'
 import newyorkimg from '../assets/locations/newyork.png'
 import sanfranimg from '../assets/locations/sanfran.png'
 import LocationCard from './LocationCard'
+import { motion } from 'framer-motion'
 
 function LocationSection() {
 
@@ -49,7 +50,7 @@ function LocationSection() {
         <div className='flex px-8 py-4 gap-4 overflow-scroll no-scrollbar 2xl:overflow-auto'>
             {
                 locations.map((item, index) => {
-                    return <LocationCard key={index} image={item.image} name={item.Name} />
+                    return <LocationCard key={index} count={index} image={item.image} name={item.Name} />
                 })
             }
         </div>

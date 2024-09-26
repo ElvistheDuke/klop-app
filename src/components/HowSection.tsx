@@ -7,6 +7,7 @@ import card5 from '../assets/cards/card5.png'
 import card6 from '../assets/cards/card6.png'
 import HowCards from './HowCards'
 import bgimage from '../assets/vector-bg.png'
+import { motion } from 'framer-motion'
 
 
 
@@ -53,15 +54,23 @@ function HowSection() {
             <div className='flex flex-wrap justify-between gap-8 my-8'>
                 {
                     howcards.map((item, index) => {
-                        return<HowCards key={index} name={item.name} image={item.img} />
+                        return<HowCards key={index} num={index} name={item.name} image={item.img} />
                     })
                 }
             </div>
-            <div style={{
+            <motion.div style={{
                 backgroundImage: `url(${bgimage})`,
                 backgroundPosition: 'right top',
                 backgroundRepeat: 'no-repeat',
-            }} className='bg-black rounded-3xl gap-40 p-8 flex flex-col justify-between'>
+            }} 
+            whileInView={{
+                opacity: 1  
+            }}
+            transition={{
+                duration: 0.5
+            }}
+            viewport={{once: true}}
+            className='bg-black rounded-3xl gap-40 p-8 flex flex-col justify-between opacity-0'>
                 <div>
                     <p className='text-white max-w-[70%] md:max-w-[30%]'>Explore how our team has tackled diverse challenges in financial technology, assisting startups and major players in the commerce industry</p>
                 </div>
@@ -78,7 +87,7 @@ function HowSection() {
                         </div>  
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </div>
     </div>
   )

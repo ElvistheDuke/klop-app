@@ -4,6 +4,7 @@ import herobg from '../assets/herobg.png'
 import { GiftIcon } from '@heroicons/react/20/solid'
 import NavBar from './NavBar'
 import MobileNav from './MobileNav'
+import { motion } from 'framer-motion'
 
 const navLinks:string[] = ["Home", "About", "Services", "Dashoboard", "Blog", "Support"]
 
@@ -13,8 +14,25 @@ function HeroSection() {
         <NavBar navLinks={navLinks} />
         <MobileNav navLinks={navLinks} />
         <div className='container relative  mx-auto flex-col justify-between sm:h-[97vh]  sm:my-2  flex sm:flex-row sm:items-end p-[42px] pt-28 sm:p-[42px] '>
-            <img src={herobg} className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]' />
-            <div className='mb-12 sm:mb-0'>
+            <motion.img
+            whileInView={{opacity: 1}}
+            transition={{
+                duration: 1,
+                ease: 'easeInOut'
+            }} 
+            viewport={{once: true}}
+            src={herobg} className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] opacity-0' />
+            <motion.div 
+            className='mb-12 sm:mb-0 opacity-0 -translate-x-14'
+            whileInView={{
+                opacity: 1, 
+                transform: 'translateX(0px)'
+            }}
+            transition={{
+                duration: 0.5
+            }}
+            viewport={{once: true}}
+            >
                 <div className='flex gap-1 flex-row items-center'>
                     <div className='h-2 w-2 bg-white rounded-full' />
                     <p className='text-white text-xs'>Logistics</p>
@@ -47,8 +65,18 @@ function HeroSection() {
 
 
                 </div>
-            </div>
-            <div className='bg-white w-64 h-40 rounded-3xl p-6 relative self-end'>
+            </motion.div>
+            <motion.div
+            whileInView={{
+                opacity: 1,
+                transform: 'translateY(0px)'
+            }} 
+            transition={{
+                delay: 0.5,
+                duration: 0.5
+            }}
+            viewport={{once: true}}
+            className='bg-white w-64 h-40 rounded-3xl p-6 relative self-end opacity-0 translate-y-14'>
                 <div className='flex gap-1 items-center'>
                     <GiftIcon className='h-4 w-4' />
                     <p className='text-sm'>Special Offer</p>
@@ -59,7 +87,7 @@ function HeroSection() {
                     <ArrowUpRightIcon className='h-6 text-white' />
                 </div>  
             
-            </div>
+            </motion.div>
         </div>
     </div>
   )
