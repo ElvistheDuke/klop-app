@@ -4,7 +4,6 @@ import berlinimg from '../assets/locations/berlin.png'
 import newyorkimg from '../assets/locations/newyork.png'
 import sanfranimg from '../assets/locations/sanfran.png'
 import LocationCard from './LocationCard'
-import { motion } from 'framer-motion'
 
 function LocationSection() {
 
